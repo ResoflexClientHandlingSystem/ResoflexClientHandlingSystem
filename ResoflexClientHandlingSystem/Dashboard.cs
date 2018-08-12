@@ -62,7 +62,14 @@ namespace ResoflexClientHandlingSystem
 
         private void metroButton3_Click_1(object sender, EventArgs e)
         {
+            OfficeExpensesForm frm = new OfficeExpensesForm();
 
+            frm.Show();
+        }
+
+        private void metroPanel1_Paint(object sender, PaintEventArgs e)
+        {
+        
         }
     }
 }

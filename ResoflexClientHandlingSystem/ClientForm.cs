@@ -50,5 +50,10 @@ namespace ResoflexClientHandlingSystem
 
             clientGrid.DataSource = getClients();
         }
+
+        private void clientGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

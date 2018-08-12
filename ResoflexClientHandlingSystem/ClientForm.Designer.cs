@@ -68,7 +68,8 @@
             this.clientGrid.EnableHeadersVisualStyles = false;
             this.clientGrid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.clientGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.clientGrid.Location = new System.Drawing.Point(23, 280);
+            this.clientGrid.Location = new System.Drawing.Point(17, 228);
+            this.clientGrid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.clientGrid.Name = "clientGrid";
             this.clientGrid.ReadOnly = true;
             this.clientGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -83,15 +84,17 @@
             this.clientGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.clientGrid.RowTemplate.Height = 24;
             this.clientGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.clientGrid.Size = new System.Drawing.Size(754, 297);
+            this.clientGrid.Size = new System.Drawing.Size(566, 241);
             this.clientGrid.TabIndex = 0;
+            this.clientGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientGrid_CellContentClick);
             // 
             // addNewClientBtn
             // 
             this.addNewClientBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.addNewClientBtn.Location = new System.Drawing.Point(622, 234);
+            this.addNewClientBtn.Location = new System.Drawing.Point(466, 190);
+            this.addNewClientBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.addNewClientBtn.Name = "addNewClientBtn";
-            this.addNewClientBtn.Size = new System.Drawing.Size(155, 29);
+            this.addNewClientBtn.Size = new System.Drawing.Size(116, 24);
             this.addNewClientBtn.TabIndex = 1;
             this.addNewClientBtn.Text = "Add New Client";
             this.addNewClientBtn.UseSelectable = true;
@@ -99,13 +102,15 @@
             // 
             // ClientForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.ClientSize = new System.Drawing.Size(600, 488);
             this.Controls.Add(this.addNewClientBtn);
             this.Controls.Add(this.clientGrid);
-            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MinimumSize = new System.Drawing.Size(600, 488);
             this.Name = "ClientForm";
+            this.Padding = new System.Windows.Forms.Padding(15, 49, 15, 16);
             this.Text = "Client";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clientGrid)).EndInit();

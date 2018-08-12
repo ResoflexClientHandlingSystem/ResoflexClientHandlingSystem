@@ -88,6 +88,16 @@
     <Compile Include="ClientForm.Designer.cs">
       <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExpenceReportForm.cs" />
+    <Compile Include="ExpenceReportForm.Designer.cs">
+      <DependentUpon>ExpenceReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeExpensesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficeExpensesForm.Designer.cs">
+      <DependentUpon>OfficeExpensesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjectForm.cs">
       <SubType>Form</SubType>
@@ -103,12 +113,30 @@
     <Compile Include="Role\Expenses.cs" />
     <Compile Include="Role\Income.cs" />
     <Compile Include="Role\OfficeExpenses.cs" />
+    <Compile Include="Role\pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Role\pay.Designer.cs">
+      <DependentUpon>pay.cs</DependentUpon>
+    </Compile>
     <Compile Include="Role\ProjectExpenses.cs" />
     <Compile Include="Role\Project.cs" />
     <Compile Include="Role\ProjectIncome.cs" />
     <Compile Include="Role\StaffExpenses.cs" />
     <Compile Include="Role\Staff.cs" />
     <Compile Include="Role\User.cs" />
+    <Compile Include="Salary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Salary.Designer.cs">
+      <DependentUpon>Salary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test.Designer.cs">
+      <DependentUpon>test.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddNewClientForm.resx">
       <DependentUpon>AddNewClientForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +145,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientForm.resx">
       <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExpenceReportForm.resx">
+      <DependentUpon>ExpenceReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeExpensesForm.resx">
+      <DependentUpon>OfficeExpensesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProjectForm.resx">
       <DependentUpon>ProjectForm.cs</DependentUpon>
@@ -130,6 +164,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Role\pay.resx">
+      <DependentUpon>pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Salary.resx">
+      <DependentUpon>Salary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

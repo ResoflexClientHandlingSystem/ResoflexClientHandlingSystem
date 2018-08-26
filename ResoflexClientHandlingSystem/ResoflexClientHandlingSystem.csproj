@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CircularProgressBar">
+    <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\CircularProgressBar.2.5.6403.13419\lib\net35-client\CircularProgressBar.dll</HintPath>
     </Reference>
     <Reference Include="eCryptography">
@@ -72,7 +72,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WinFormAnimation">
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -194,17 +194,11 @@
     <Compile Include="ProjectExpenses\GenarateReportForm.designer.cs">
       <DependentUpon>GenarateReportForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProjectExpenses\IOUListForm1.cs">
+    <Compile Include="ProjectExpenses\IOUListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProjectExpenses\IOUListForm1.designer.cs">
-      <DependentUpon>IOUListForm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectExpenses\ProjectExpensesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ProjectExpenses\ProjectExpensesForm.designer.cs">
-      <DependentUpon>ProjectExpensesForm.cs</DependentUpon>
+    <Compile Include="ProjectExpenses\IOUListForm.designer.cs">
+      <DependentUpon>IOUListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OfficeExpenses\OfficeExpensesForm.cs">
       <SubType>Form</SubType>
@@ -423,11 +417,8 @@
     <EmbeddedResource Include="ProjectExpenses\GenarateReportForm.resx">
       <DependentUpon>GenarateReportForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProjectExpenses\IOUListForm1.resx">
-      <DependentUpon>IOUListForm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProjectExpenses\ProjectExpensesForm.resx">
-      <DependentUpon>ProjectExpensesForm.cs</DependentUpon>
+    <EmbeddedResource Include="ProjectExpenses\IOUListForm.resx">
+      <DependentUpon>IOUListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OfficeExpenses\OfficeExpensesForm.resx">
       <DependentUpon>OfficeExpensesForm.cs</DependentUpon>

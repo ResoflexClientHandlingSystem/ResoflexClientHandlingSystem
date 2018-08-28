@@ -186,17 +186,23 @@ namespace ResoflexClientHandlingSystem
 
                 reader1.Close();
 
-                MySqlDataReader reader2 = DBConnection.getData("select staff_id from schedule_technicians where ( sch_no =" + schNo + " and proj_id = " + proj_id + ");");
+                MySqlDataReader reader2 = DBConnection.getData("select st.staff_id, s.first_name, s.last_name from schedule_technicians st, staff s where ( st.sch_no =" + schNo + " and st.proj_id = " + proj_id + ") and (s.staff_id = st.staff_id);");
 
-                while (reader2.NextResult())
+                while (reader2.Read())
                 {
-                    Staff staff = new Staff(int.Parse(reader1.GetString("staff_id")));
+                    Staff staff = new Staff();
+                    staff.StaffId = int.Parse(reader2.GetString("staff_id"));
+                    staff.FirstName = reader2.GetString("first_name");
+                    staff.LastName = reader2.GetString("last_name");
+
+                    MessageBox.Show(int.Parse(reader2.GetString("staff_id")) + reader2.GetString("first_name") + reader2.GetString("last_name"));
+
                     serviceEng.Add(staff);
                 }
 
-                reader2.Close();
-
                 sch.ServEngineer = serviceEng;
+
+                reader2.Close();
 
             }
             else
@@ -207,7 +213,7 @@ namespace ResoflexClientHandlingSystem
             return sch;
         }
 
-
+        //updating schedules
         private void updateSchedule_OnClick(object sender, EventArgs e)
         {
             DataGridViewRow row = scheduleGrid.CurrentRow;
@@ -223,7 +229,7 @@ namespace ResoflexClientHandlingSystem
         }
 
         //Data for grid
-        private DataTable getSchedules()
+        private static DataTable getSchedules()
         {
             DataTable dt = new DataTable();
 

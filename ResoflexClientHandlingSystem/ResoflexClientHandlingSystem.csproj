@@ -182,6 +182,12 @@
     <Compile Include="EventForms\AddEventForm.Designer.cs">
       <DependentUpon>AddEventForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventForms\UpdateEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventForms\UpdateEventForm.Designer.cs">
+      <DependentUpon>UpdateEventForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProjectExpenses\AddExpensesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -451,6 +457,9 @@
     <EmbeddedResource Include="EventForms\AddEventForm.resx">
       <DependentUpon>AddEventForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EventForms\UpdateEventForm.resx">
+      <DependentUpon>UpdateEventForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ProjectExpenses\AddExpensesForm.resx">
       <DependentUpon>AddExpensesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -567,6 +576,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="TaskForms\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

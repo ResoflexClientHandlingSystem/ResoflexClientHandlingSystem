@@ -205,7 +205,7 @@ namespace ResoflexClientHandlingSystem
         }
 
         //adding service engineers
-        private void addEng_MouseClick(object sender, MouseEventArgs e)
+        private void addEng_Click(object sender, MouseEventArgs e)
         {
             DataRow row;
 
@@ -234,9 +234,13 @@ namespace ResoflexClientHandlingSystem
         }
 
         //adding resources
-        private void addReso_MouseClick(object sender, MouseEventArgs e)
+        private void addReso_Click(object sender, EventArgs e)
         {
-            resoBox.Text = resoBox.Text + schReso.Text + ", ";
+            string resources = schReso.Text.ToString();
+            schReso.Text = "";
+
+            resoBox.AppendText(resources + " ");
+            resoBox.AppendText(Environment.NewLine);
         }
 
         //adding a new schedule
@@ -255,8 +259,8 @@ namespace ResoflexClientHandlingSystem
             schedule.ProjectOfSchedule= new Project(int.Parse(projectName.SelectedValue.ToString()));
             schedule.Type = new EventType(int.Parse(scheduleType.SelectedValue.ToString()));
             schedule.ServEngineer = serviceEng;
-            schedule.To = Convert.ToDateTime(schStartDate.Text.ToString() + " " + schStartTime.Text.ToString());
-            schedule.From = Convert.ToDateTime(schEndDate.Text.ToString() + " " + schEndTime.Text.ToString());
+            schedule.To = Convert.ToDateTime(schEndDate.Text.ToString() + " " + schEndTime.Text.ToString());
+            schedule.From = Convert.ToDateTime(schStartDate.Text.ToString() + " " + schStartTime.Text.ToString());
             schedule.TodoList = todoList.Text.ToString();
             schedule.Resource = resoBox.Text.ToString();
             schedule.Checklist = checkList.Text.ToString();
@@ -284,6 +288,8 @@ namespace ResoflexClientHandlingSystem
                             "\n A new schedule has been added for project " + projectName.Text.ToString() + ". Please check your schedules ASAP." ;
 
                         Internet.sendMail(reader.GetString("email"), subject, body);
+
+                        reader.Close();
                     }
                 }
 

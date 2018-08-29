@@ -62,7 +62,7 @@ namespace ResoflexClientHandlingSystem.Role
 
         public Project(int proj_id)
         {
-            this.proj_id = proj_id;
+            this.ProjectID = proj_id;
         }
 
         public int ProjectID { get => projectID; set => projectID = value; }

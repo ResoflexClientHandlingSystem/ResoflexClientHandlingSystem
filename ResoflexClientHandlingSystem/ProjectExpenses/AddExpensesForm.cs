@@ -34,8 +34,23 @@ namespace ResoflexClientHandlingSystem
         {
             InitializeComponent();
 
-            eventID.Text = eventID.ToString();
+            //eventID.Text = eventID.ToString();
+            
             fillExpensesTypeCmbBox();
+        }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+            ExpenseDetailEvent ede = new ExpenseDetailEvent();
+            ede.PaymentType = paymentType.Text.ToString();
+            ede.ProjectOfEvent = new Project(int.Parse(projectID.Text.ToString()));
+            ede.EventOfExp = new Event(int.Parse(eventID.Text.ToString()));
+            ede.ExpType = new ExpenseType(int.Parse(expenseType.SelectedValue.ToString()));
+            ede.Comment = details.Text.ToString();
+            ede.Amount = double.Parse(totalAmount.Text.ToString());
+
+            Database.AddExpenses(ede);
+
         }
 
         private void CategorySetupForm_Load(object sender, EventArgs e)
@@ -43,10 +58,7 @@ namespace ResoflexClientHandlingSystem
 
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void ExpensesTypeComboBox(object sender, EventArgs e)
         {
@@ -76,5 +88,8 @@ namespace ResoflexClientHandlingSystem
             }
 
         }
+
+
+       
     }
 }

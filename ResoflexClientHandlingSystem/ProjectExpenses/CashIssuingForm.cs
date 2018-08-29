@@ -18,28 +18,26 @@ namespace ResoflexClientHandlingSystem
 
     {
 
-        private Project projectOfIou;
-        private Schedule scheduleOfIou;
-        private DateTime date;
-        private float amount;
-        private string detail;
-
+         Project projectOfSchedule;
+         Schedule scheduleOfIou;
+           float amount;
+       string Comment;
+        private object projectID;
 
         public CashIssuingForm()
         {
             InitializeComponent();
-
+            iouIdDisplay();
 
         }
 
-        public CashIssuingForm(Project projectOfIou, Schedule scheduleOfIou, DateTime date, float amount, string detail)
+
+        public CashIssuingForm(Project projectOfIou, Schedule scheduleOfIou)
         {
             InitializeComponent();
-            this.projectOfIou = projectOfIou;
-            this.scheduleOfIou = scheduleOfIou;
-            this.date = date;
-            this.amount = amount;
-            this.detail = detail;
+            iouIdDisplay();
+
+
         }
 
         private void CashIssuingForm_Load(object sender, EventArgs e)
@@ -54,50 +52,69 @@ namespace ResoflexClientHandlingSystem
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-           
+            ExpenseDetailSchedule ed = new ExpenseDetailSchedule();
 
-            DateTime date = cashDateTimeTxtBox.Value;
-            float amount = float.Parse(amountTxtBox.Text);
+
+            ed.ScheduleOfExp = new Schedule(int.Parse(scheduleId.Text.ToString()));
+            ed.ProjectOfSchedule = new Project(int.Parse(projectIdBox.Text.ToString()));
+            ed.Amount = float.Parse(amountTxtBox.Text);
+            ed.Comment = details.Text.ToString();
+
+
+            Database.CashIssue(ed);
+
+
 
     }
 
-
-        private void staffNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        public void iouIdDisplay()
         {
-            fillstaffCmbBox();
-            string staffName = staffNameComboBox.SelectedItem.ToString();
-            staffNameComboBox.SelectedIndex = 1;
+            MySqlDataReader r = DBConnection.getData("select iou_id from iou order by iou_id desc ");
+            r.Read();
+            iouIdBox.Text = (r.GetInt16("iou_id") + 1).ToString();
+
+
+            r.Close();
 
         }
 
 
-        private void fillstaffCmbBox()
-            {
-                staffNameComboBox.Items.Clear();
+        /* private void staffNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+         {
+             fillstaffCmbBox();
+             string staffName = staffNameComboBox.SelectedItem.ToString();
+             staffNameComboBox.SelectedIndex = 1;
 
-                try
-                {
-                    MySqlDataReader reader = DBConnection.getData("select staff_id, name from staff");
-
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            staffNameComboBox.Items.Add(reader.GetString("name"));
-                        }
-                    }
-
-                    reader.Close();
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Error in filling the Staff comboBox!", "staff Filler", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            
+         }
 
 
-        }
+         private void fillstaffCmbBox()
+             {
+                 staffNameComboBox.Items.Clear();
 
-       
+                 try
+                 {
+                     MySqlDataReader reader = DBConnection.getData("select staff_id, name from staff");
+
+                     if (reader.HasRows)
+                     {
+                         while (reader.Read())
+                         {
+                             staffNameComboBox.Items.Add(reader.GetString("name"));
+                         }
+                     }
+
+                     reader.Close();
+                 }
+                 catch (Exception)
+                 {
+                     MessageBox.Show("Error in filling the Staff comboBox!", "staff Filler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                 }
+
+
+
+         }
+         */
+
     }
 }

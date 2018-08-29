@@ -32,7 +32,10 @@ namespace ResoflexClientHandlingSystem.Role
         {
 
         }
-
+        public Schedule(int scheduleId)
+        {
+            this.scheduleId = scheduleId;
+        }
         public Schedule(int scheduleId, Project projectOfSchedule, EventType type, ArrayList servEngineer, DateTime from, DateTime to, string vehicle, float mileage, string todoList, string resource, string checklist, string travelMode, string accommodationMode, string meals, string logs)
         {
             this.ScheduleId = scheduleId;
@@ -67,5 +70,6 @@ namespace ResoflexClientHandlingSystem.Role
         public string AccommodationMode { get => accommodationMode; set => accommodationMode = value; }
         public string Meals { get => meals; set => meals = value; }
         public string Logs { get => logs; set => logs = value; }
+        public object Text { get; internal set; }
     }
 }

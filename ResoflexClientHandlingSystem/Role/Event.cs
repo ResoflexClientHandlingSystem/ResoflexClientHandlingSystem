@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ResoflexClientHandlingSystem.Role
 {
-    class Event
+    public class Event
     {
         private int eventId;
         private Project eventProject;
@@ -44,9 +44,9 @@ namespace ResoflexClientHandlingSystem.Role
         internal EventType Type { get => type; set => type = value; }
         internal Staff ServEngineer { get => servEngineer; set => servEngineer = value; }
 
-        public Event()
+        public Event(int  eventID)
         {
-
+            this.EventId = eventID;
         }
 
         public Event(int eventId, Project eventProject, EventType type, Staff servEngineer, DateTime from, DateTime to, string vehicleDetails, float mileage, string feedback, string other, string todoList, string resource, string checklist, string travelMode, string accommodationMode, string meals, int schNo)

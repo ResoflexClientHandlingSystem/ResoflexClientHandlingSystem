@@ -44,7 +44,7 @@
             // metroButton2
             // 
             this.metroButton2.BackColor = System.Drawing.Color.Aqua;
-            this.metroButton2.Location = new System.Drawing.Point(706, 75);
+            this.metroButton2.Location = new System.Drawing.Point(718, 85);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(138, 51);
             this.metroButton2.TabIndex = 9;
@@ -55,7 +55,7 @@
             // metroButton4
             // 
             this.metroButton4.BackColor = System.Drawing.Color.Aqua;
-            this.metroButton4.Location = new System.Drawing.Point(738, 174);
+            this.metroButton4.Location = new System.Drawing.Point(750, 165);
             this.metroButton4.Name = "metroButton4";
             this.metroButton4.Size = new System.Drawing.Size(106, 52);
             this.metroButton4.TabIndex = 11;
@@ -66,7 +66,7 @@
             // metroGrid1
             // 
             this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -118,7 +118,7 @@
             // metroButton1
             // 
             this.metroButton1.BackColor = System.Drawing.Color.Aqua;
-            this.metroButton1.Location = new System.Drawing.Point(738, 261);
+            this.metroButton1.Location = new System.Drawing.Point(750, 268);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(106, 55);
             this.metroButton1.TabIndex = 14;
@@ -129,7 +129,7 @@
             // metroButton5
             // 
             this.metroButton5.BackColor = System.Drawing.Color.Aqua;
-            this.metroButton5.Location = new System.Drawing.Point(738, 369);
+            this.metroButton5.Location = new System.Drawing.Point(750, 369);
             this.metroButton5.Name = "metroButton5";
             this.metroButton5.Size = new System.Drawing.Size(106, 52);
             this.metroButton5.TabIndex = 15;

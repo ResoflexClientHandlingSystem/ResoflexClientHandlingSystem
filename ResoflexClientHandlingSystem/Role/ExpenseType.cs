@@ -6,15 +6,23 @@ using System.Threading.Tasks;
 
 namespace ResoflexClientHandlingSystem.Role
 {
-    class ExpenseType
+    public class ExpenseType
     {
         private int expTypeId;
         private string type;
 
+        public ExpenseType(int expTypeId)
+        {
+            this.ExpTypeId = expTypeId;
+        }
+
         public ExpenseType(int expTypeId, string type)
         {
-            this.expTypeId = expTypeId;
-            this.type = type;
+            this.ExpTypeId = expTypeId;
+            this.Type = type;
         }
+
+        public int ExpTypeId { get => expTypeId; set => expTypeId = value; }
+        public string Type { get => type; set => type = value; }
     }
 }

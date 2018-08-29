@@ -17,7 +17,7 @@ namespace ResoflexClientHandlingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AddExpensesForm());
+            Application.Run(new BalanceSheetForm());
         }
     }
 }

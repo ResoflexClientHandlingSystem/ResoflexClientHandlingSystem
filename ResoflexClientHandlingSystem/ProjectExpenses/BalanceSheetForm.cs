@@ -119,6 +119,11 @@ namespace ResoflexClientHandlingSystem
             exp_grid_box.DataSource = bSheet;
         }
 
+        private void BalanceSheetForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
         /*private void projectName_SelectedIndexChanged(object sender, EventArgs e)
         {
             income.Text = "";

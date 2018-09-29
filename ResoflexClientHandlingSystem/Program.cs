@@ -18,7 +18,8 @@ namespace ResoflexClientHandlingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OfficeExpensesForm.OfficeExpensesMainForm());
+            Application.Run(new Dashboard());
         }
     }
 }
+111111

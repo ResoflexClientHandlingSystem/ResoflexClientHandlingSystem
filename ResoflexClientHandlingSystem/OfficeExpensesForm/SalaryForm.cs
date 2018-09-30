@@ -269,8 +269,8 @@ namespace ResoflexClientHandlingSystem
                 double Allowance = Double.Parse(allowance.Text.ToString());
 
                 double balall = basicSal + Allowance;
-                double epf = (balall * 8 / 100); // deduc
-                double etf = (balall * 3 / 100); //from gov
+                double epf = (basicSal * 8 / 100); // deduc
+                double etf = (basicSal * 3 / 100); //from gov
 
 
                 metroTextBox1.Text = "" + epf;

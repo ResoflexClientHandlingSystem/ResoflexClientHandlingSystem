@@ -405,6 +405,7 @@
             this.metroButton2.TabIndex = 32;
             this.metroButton2.Text = "Reports";
             this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // schHome
             // 

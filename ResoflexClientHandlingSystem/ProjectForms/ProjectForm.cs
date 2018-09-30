@@ -45,9 +45,9 @@ namespace ResoflexClientHandlingSystem
             {
                 if (Userglobals.priv != "PM")
                 {
-                    addProjectBtn.Visible = false;
-                    updateProjectBtn.Visible = false;
-                    metroButton1.Visible = false;
+                    addProjectBtn.Visible = true;
+                    updateProjectBtn.Visible = true;
+                    metroButton1.Visible = true;
                 }
 
                 profilebtn.Visible = true;
@@ -393,7 +393,13 @@ namespace ResoflexClientHandlingSystem
 
             projectGrid.BackgroundColor = Color.FromArgb(color);*/
         }
-        
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            ProjectForms.Reports rpt = new ProjectForms.Reports();
+            rpt.Show();
+        }
+
 
 
 

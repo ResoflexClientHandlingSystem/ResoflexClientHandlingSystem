@@ -97,9 +97,9 @@
             this.metroLabel2.FontWeight = MetroFramework.MetroLabelWeight.Bold;
             this.metroLabel2.Location = new System.Drawing.Point(3, 105);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(61, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(181, 19);
             this.metroLabel2.TabIndex = 1;
-            this.metroLabel2.Text = "Balance";
+            this.metroLabel2.Text = "This month Direct amount";
             // 
             // tile1
             // 

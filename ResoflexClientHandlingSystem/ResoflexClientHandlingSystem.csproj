@@ -338,6 +338,9 @@
     <Compile Include="OfficeExpensesForm\OldForms\UpdateSalaryForm.Designer.cs">
       <DependentUpon>UpdateSalaryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OfficeExpensesForm\Reports\OfficeDataSet.cs">
+      <DependentUpon>OfficeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OfficeExpensesForm\Reports\OfficeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -353,6 +356,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OfficeIOUExp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficeExpensesForm\Reports\SalbyEmp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalbyEmp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OfficeExpensesForm\Reports\SalByMonth.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalByMonth.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="OfficeExpensesForm\SalaryForm.cs">
@@ -785,6 +800,14 @@
     <EmbeddedResource Include="OfficeExpensesForm\Reports\OfficeIOUExp.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>OfficeIOUExp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeExpensesForm\Reports\SalbyEmp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalbyEmp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeExpensesForm\Reports\SalByMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalByMonth.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="OfficeExpensesForm\SalaryForm.resx">
       <DependentUpon>SalaryForm.cs</DependentUpon>

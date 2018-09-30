@@ -170,6 +170,8 @@ namespace ResoflexClientHandlingSystem
 
                 if (isSuccess)
                 {
+
+                    MessageBox.Show("Project Successfully Added!", "Project Added", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     MessageBox.Show("Project added mail sent");
                 }
                 else
@@ -299,6 +301,15 @@ namespace ResoflexClientHandlingSystem
         private void catComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            nameTxt.Text = "RFS Online POS System";
+            DescripTxt.Text = "Create webbased Point of Sales system for RFS";
+            warTerTxt.Text = "Regular Warranty with basic conditions";
+            visitTermTxt.Text = "2 Free Visits for training";
+            supTermTxt.Text = "Team Viewer Support when client needed";
         }
     }
 

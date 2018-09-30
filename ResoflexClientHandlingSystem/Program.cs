@@ -19,7 +19,7 @@ namespace ResoflexClientHandlingSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BalanceSheetForm());
+            Application.Run(new Login());
         }
     }
 }

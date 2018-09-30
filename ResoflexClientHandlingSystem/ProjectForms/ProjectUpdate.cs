@@ -119,20 +119,29 @@ namespace ResoflexClientHandlingSystem
         {
             DateTime firstTran = firstTraCompDate.Value;
 
+
             if (Validation.isFuture(firstTran))
             {
                 MessageBox.Show("Invalid Date");
             }
+
+            
         }
 
         private void secoTraCompDate_ValueChanged(object sender, EventArgs e)
         {
 
+            DateTime firstTran = firstTraCompDate.Value;
             DateTime secondTran = secoTraCompDate.Value;
 
             if (Validation.isFuture(secondTran))
             {
                 MessageBox.Show("Invalid Date");
+            }
+
+            if (firstTraCompDate.Value > secoTraCompDate.Value)
+            {
+                MessageBox.Show("Second training complete date must be after the first training complete date");
             }
         }
     }

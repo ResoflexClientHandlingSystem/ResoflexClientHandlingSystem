@@ -47,6 +47,7 @@
             this.notifySuccessProjectAdding = new System.Windows.Forms.NotifyIcon(this.components);
             this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.catComboBox = new MetroFramework.Controls.MetroComboBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -294,10 +295,11 @@
             // addBtn
             // 
             this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.addBtn.Location = new System.Drawing.Point(431, 405);
+            this.addBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.Location = new System.Drawing.Point(410, 416);
             this.addBtn.Margin = new System.Windows.Forms.Padding(2);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(83, 25);
+            this.addBtn.Size = new System.Drawing.Size(105, 29);
             this.addBtn.TabIndex = 39;
             this.addBtn.Text = "ADD";
             this.addBtn.UseVisualStyleBackColor = false;
@@ -306,10 +308,11 @@
             // clearBtn
             // 
             this.clearBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.clearBtn.Location = new System.Drawing.Point(336, 405);
+            this.clearBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clearBtn.Location = new System.Drawing.Point(291, 416);
             this.clearBtn.Margin = new System.Windows.Forms.Padding(2);
             this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(83, 25);
+            this.clearBtn.Size = new System.Drawing.Size(105, 29);
             this.clearBtn.TabIndex = 40;
             this.clearBtn.Text = "CLEAR";
             this.clearBtn.UseVisualStyleBackColor = false;
@@ -343,11 +346,22 @@
             this.catComboBox.UseSelectable = true;
             this.catComboBox.SelectedIndexChanged += new System.EventHandler(this.catComboBox_SelectedIndexChanged);
             // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(28, 421);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 43;
+            this.metroButton1.Text = "Demo";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
             // UpdateProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 463);
+            this.ClientSize = new System.Drawing.Size(546, 473);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.catComboBox);
             this.Controls.Add(this.metroComboBox1);
             this.Controls.Add(this.clearBtn);
@@ -394,5 +408,6 @@
         private System.Windows.Forms.NotifyIcon notifySuccessProjectAdding;
         private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroComboBox catComboBox;
+        private MetroFramework.Controls.MetroButton metroButton1;
     }
 }

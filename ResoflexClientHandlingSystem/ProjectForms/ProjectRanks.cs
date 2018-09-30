@@ -97,17 +97,50 @@ namespace ResoflexClientHandlingSystem
 
         private void checklimit()
         {
-            int limit= Convert.ToInt32(metroTextBox1.Text);
-            for (int i = 0; i < projectExGrid.Rows.Count; i++)
+            try
             {
-                int val = Int32.Parse(projectExGrid.Rows[i].Cells[3].Value.ToString());
-                if (val >= limit)
-                {
-                    projectExGrid.Rows[i].DefaultCellStyle.BackColor = Color.LightSalmon;
-                }
 
+                int limit = Convert.ToInt32(metroTextBox1.Text);
+                for (int i = 0; i < projectExGrid.Rows.Count; i++)
+                {
+                    int val = Int32.Parse(projectExGrid.Rows[i].Cells[3].Value.ToString());
+                    if (val >= limit)
+                    {
+                        projectExGrid.Rows[i].DefaultCellStyle.ForeColor = Color.Red;
+                    }
+                }
             }
+
+            catch (FormatException)
+            {
+                MessageBox.Show("Please enter valid number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
+       
+
+
+        private void checkcount()
+        {
+            try
+            {
+                int limit = Convert.ToInt32(metroTextBox2.Text);
+                for (int i = 0; i < projectExGrid.Rows.Count; i++)
+                {
+                    int val = Int32.Parse(projectExGrid.Rows[i].Cells[2].Value.ToString());
+                    if (val >= limit)
+                    {
+                        projectExGrid.Rows[i].DefaultCellStyle.ForeColor = Color.Red;
+                    }
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Please enter valid number!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+        
 
 
         private void addProjectBtn_Click(object sender, EventArgs e)
@@ -156,7 +189,7 @@ namespace ResoflexClientHandlingSystem
 
         private void visitGrid_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            visitGrid.Rows[0].DefaultCellStyle.BackColor = Color.LightSalmon;
+            visitGrid.Rows[0].DefaultCellStyle.ForeColor = Color.Red;
         }
 
 
@@ -174,11 +207,11 @@ namespace ResoflexClientHandlingSystem
 
                 if (DateTime.Now > exDate)
                 {
-                    row.DefaultCellStyle.BackColor = Color.LightSalmon;
+                    row.DefaultCellStyle.ForeColor = Color.Red;
                 }
                 else if (DateTime.Now < exDate)
                 {
-                    row.DefaultCellStyle.BackColor = Color.LightSkyBlue;
+                    row.DefaultCellStyle.ForeColor = Color.Red;
                 }
             }
         }
@@ -203,6 +236,11 @@ namespace ResoflexClientHandlingSystem
         private void metroLabel4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroTextBox2_TextChanged(object sender, EventArgs e)
+        {
+            checkcount();
         }
     }
 }

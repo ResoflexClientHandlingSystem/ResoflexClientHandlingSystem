@@ -70,12 +70,11 @@ namespace ResoflexClientHandlingSystem.OfficeExpensesForm
 
                 reader.Close();
 
-                reader = DBConnection.getData("SELECT * FROM((SELECT IFNULL(SUM(ev.amount), 0) as outExp FROM exp_detail_event ev) " +
-                "UNION (SELECT IFNULL(SUM(ip.amount), 0) inExp FROM project_exp_in_amount ip)) tmp");
+                reader = DBConnection.getData("select IFNULL(SUM(amount), 0) from office_expenses where  type='Direct'");
 
                 while (reader.Read())
                 {
-                    tile2.Text = (reader.GetValue(0).ToString());
+                    tile2.Text = "Rs." + reader.GetDouble(0);
                 }
 
                 reader.Close();

@@ -157,7 +157,10 @@ namespace ResoflexClientHandlingSystem.ProjectForms
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            string qry2 = "select p.proj_name,  a.in_date, a.amount from project p, project_exp_in_amount a where p.proj_id=a.project_id";
+            string dateFormat = "yyyy-MM-dd";
+
+
+            string qry2 = "select p.proj_name,  a.in_date, a.amount from project p, project_exp_in_amount a where p.proj_id=a.project_id and a.in_date between '"+ metroDateTime1.Value.ToString(dateFormat) + "' and '"+ metroDateTime2.Value.ToString(dateFormat) + "' ";
             DataSet2(qry2);
         }
     }

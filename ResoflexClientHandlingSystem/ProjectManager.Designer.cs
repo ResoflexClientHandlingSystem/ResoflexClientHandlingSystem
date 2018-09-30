@@ -61,9 +61,11 @@
             // btnTasks
             // 
             this.btnTasks.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnTasks.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnTasks.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTasks.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTasks.BackgroundImage")));
             this.btnTasks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnTasks.DisplayFocus = true;
+            this.btnTasks.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnTasks.Location = new System.Drawing.Point(393, 283);
             this.btnTasks.Margin = new System.Windows.Forms.Padding(2);
             this.btnTasks.Name = "btnTasks";
@@ -77,9 +79,10 @@
             // btnEvents
             // 
             this.btnEvents.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEvents.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEvents.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEvents.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEvents.BackgroundImage")));
             this.btnEvents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnEvents.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnEvents.Location = new System.Drawing.Point(142, 283);
             this.btnEvents.Margin = new System.Windows.Forms.Padding(2);
             this.btnEvents.Name = "btnEvents";
@@ -93,9 +96,10 @@
             // btnSchedule
             // 
             this.btnSchedule.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSchedule.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSchedule.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSchedule.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSchedule.BackgroundImage")));
             this.btnSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSchedule.FontSize = MetroFramework.MetroButtonSize.Tall;
             this.btnSchedule.Location = new System.Drawing.Point(393, 37);
             this.btnSchedule.Margin = new System.Windows.Forms.Padding(2);
             this.btnSchedule.Name = "btnSchedule";
@@ -108,9 +112,11 @@
             // 
             // btnProjects
             // 
-            this.btnProjects.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnProjects.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnProjects.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProjects.BackgroundImage")));
             this.btnProjects.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnProjects.FontSize = MetroFramework.MetroButtonSize.Tall;
+            this.btnProjects.ForeColor = System.Drawing.Color.Black;
             this.btnProjects.Location = new System.Drawing.Point(142, 37);
             this.btnProjects.Margin = new System.Windows.Forms.Padding(2);
             this.btnProjects.Name = "btnProjects";
@@ -118,6 +124,8 @@
             this.btnProjects.TabIndex = 21;
             this.btnProjects.Text = "Projects";
             this.btnProjects.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnProjects.UseCustomBackColor = true;
+            this.btnProjects.UseCustomForeColor = true;
             this.btnProjects.UseSelectable = true;
             this.btnProjects.Click += new System.EventHandler(this.btnProjects_Click);
             // 

@@ -36,14 +36,9 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.SelectMemComboBox = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
-            this.veiwGridBtn = new MetroFramework.Controls.MetroButton();
             this.htmlLabel1 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.htmlLabel2 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.selectMemCmbBox = new MetroFramework.Controls.MetroComboBox();
-            this.htmlLabel1 = new MetroFramework.Drawing.Html.HtmlLabel();
             this.selectTaskCmbBox = new MetroFramework.Controls.MetroComboBox();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
@@ -268,7 +263,6 @@
             this.comparisonChart.Size = new System.Drawing.Size(652, 337);
             this.comparisonChart.TabIndex = 3;
             this.comparisonChart.Text = "Task Chart";
-            this.comparisonChart.Click += new System.EventHandler(this.comparisonChart_Click);
             // 
             // profilebtn
             // 
